@@ -1,14 +1,11 @@
-degree = 0
-
 def on_forever():
-    global degree
-    degree = input.compass_heading()
-    if degree < 45 or degree >= 315:
-        basic.show_string("N")
-    elif degree < 135:
-        basic.show_string("E")
-    elif degree < 225:
-        basic.show_string("S")
-    else:
-        basic.show_string("W")
+    for y in range(6):
+        for x in range(6):
+            led.plot(0, y)
+            basic.pause(100)
+    basic.pause(100)
+    for x2 in range(6):
+        for y2 in range(6):
+            led.unplot(5 - x2, 5 - y2)
+    basic.pause(100)
 basic.forever(on_forever)
