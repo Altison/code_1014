@@ -1,4 +1,4 @@
-basic.forever(function () {
+input.onButtonPressed(Button.A, function () {
     for (let y = 0; y <= 5; y++) {
         for (let x = 0; x <= 5; x++) {
             if (y == 1) {
@@ -10,7 +10,7 @@ basic.forever(function () {
     }
     basic.pause(100)
 })
-basic.forever(function () {
+input.onButtonPressed(Button.B, function () {
     for (let x = 0; x <= 5; x++) {
         for (let y = 0; y <= 5; y++) {
             if (x % 2 == 1) {
